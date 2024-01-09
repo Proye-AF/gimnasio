@@ -1,0 +1,1238 @@
+@import "./utilities/colores";
+@import "./utilities/mixins";
+@import "./globals/resets";
+
+.header {
+    width: 100%;
+    height: 4.3rem;
+    @include flex (flex, row, wrap, center, center);
+    background: $bg_nosotros;
+    position: fixed;
+    z-index: 1000;
+
+    &__nav {
+        width: 80%;
+        height: 80%;
+        @include flex (flex, row, wrap, center, center);
+
+        &__ul {
+            width: 100%;
+            height: 100%;
+            padding: 0 10px 0 10px;
+            @include flex (flex, row, wrap, space-between, center);
+            line-height: 43px;
+
+            &__div {
+                @include flex (flex, row, wrap, center, center);
+                height: 100%;
+
+                &__logo {
+                    img {
+                        width: 150px;
+                        height: 50px;
+                    }
+                }
+
+                p {
+                    padding-right: 5px;
+                }
+            }
+
+            &__li {
+                height: 80%;
+
+                &__links {
+                    color: white;
+                    font-family: sans-serif;
+                    font-size: 0.8rem;
+                }
+            }
+
+            &__horarios {
+                height: 80%;
+                width: 130px;
+                text-align: center;
+
+
+                &__a {
+                    button {
+                        width: 100%;
+                        height: 100%;
+                        padding: 8px 0 8px 0;
+                        line-height: 20px;
+                        border-radius: 20px;
+                        background: transparent;
+                        border: 2px $cl_botones solid;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &__asoc {
+                height: 80%;
+                width: 130px;
+                text-align: center;
+
+                &__a {
+
+                    button {
+                        width: 100%;
+                        height: 100%;
+                        padding: 8px 0 8px 0;
+                        line-height: 20px;
+                        border-radius: 20px;
+                        background: $cl_botones;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    transition: all .5s ease-in-out;
+}
+
+.dropdown-menu {
+    background: $bg_nosotros;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    color: black;
+    transition: all .3s;
+}
+
+.promo {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.334);
+    z-index: 10000;
+    position: fixed;
+}
+
+.divPromo {
+    width: 40%;
+    margin: 0 auto;
+    height: 80%;
+    margin-top: 50px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.top {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.position {
+    margin: 0 auto;
+}
+
+.off {
+    display: none;
+}
+
+.banner {
+    &__video {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &__items {
+        @include flex (flex, row, wrap, center, center);
+        width: 70%;
+        height: 20rem;
+        position: absolute;
+        top: 150px;
+        left: 200px;
+
+        &__titulos {
+            width: 100%;
+            text-align: center;
+
+            h1 {
+                width: 100%;
+                font-family: 'Kdam Thmor Pro';
+                font-size: 120px;
+                color: white;
+            }
+
+            h2 {
+                width: 100%;
+                font-family: 'M PLUS Code Latin';
+                font-size: 80px;
+                color: $cl_botones;
+            }
+        }
+
+        &__clases {
+            @include flex (flex, row, wrap, space-around, center);
+            width: 100%;
+            padding: 50px 0 50px 0;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+            &__ath {
+                color: $athletics;
+            }
+
+            &__bike {
+                color: $bikers;
+            }
+
+            &__yog {
+                color: $yoggers;
+            }
+
+            &__cross {
+                color: $crosfiters;
+            }
+
+            &__fight {
+                color: $fighters;
+            }
+        }
+
+        &__boton {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 30px;
+
+            button {
+                width: 100%;
+                height: 50px;
+                padding: 8px 0 8px 0;
+                border-radius: 20px;
+                background: $cl_botones;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 900;
+    padding: 30px;
+    width: 200px;
+
+    button {
+        width: 100%;
+        padding: 8px 0 8px 0;
+        border-radius: 20px;
+        background: rgb(2, 86, 2);
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+#evento {
+    background-image: url(../img/evento.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+.evento-bg {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.503);
+}
+
+.evento {
+    width: 30%;
+    margin: 0 auto;
+    @include flex (flex, row, wrap, center, center);
+    padding: 150px 0 0 0;
+
+    &__logo {
+        width: 50%;
+        height: 60px;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    &__big {
+        width: 100%;
+        height: 150px;
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    button {
+        width: 40%;
+        height: 50px;
+        padding: 8px 0 8px 0;
+        border-radius: 20px;
+        background: $cl_botones;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+#nosotros {
+    background: $bg_nosotros;
+    height: 600px;
+}
+
+.textos {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding-top: 50px;
+
+    p {
+        padding: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h4 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-bottom: 30px;
+    }
+
+    h3 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+}
+
+.comunidad {
+    color: $cl_botones;
+}
+
+#clases {
+    background-image: url(../img/clases.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+.clases-bg {
+    background: rgba(0, 0, 0, 0.503);
+    width: 100%;
+    height: 100%;
+}
+
+.clases {
+    width: 50%;
+    margin: 0 auto;
+    @include flex (flex, row, wrap, center, center);
+    padding-top: 50px;
+
+    &__li {
+        width: 100%;
+        height: 100px;
+        text-align: center;
+
+        &__a {
+            width: 100%;
+            height: 100%;
+
+            button {
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 3rem;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.ath:hover {
+    background-color: $athletics;
+}
+
+.bik:hover {
+    background-color: $bikers;
+}
+
+.yogg:hover {
+    background-color: $yoggers;
+}
+
+.cross:hover {
+    background-color: $crosfiters;
+}
+
+.fig:hover {
+    background-color: $fighters;
+}
+
+#sedes {
+    height: 1200px;
+}
+
+.sedes {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0 20px 0;
+
+    h3 {
+        color: rgb(20, 20, 20);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        color: $cl_botones;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 4rem;
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(77, 77, 77);
+    }
+}
+
+.cards {
+    width: 60%;
+    margin: 0 auto;
+
+    &__div {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+
+        a {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+.ramos {
+    background-image: url(../img/sederamos.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+
+    &:hover {
+        filter: grayscale(70%);
+        font-weight: bold;
+        transition: all .3s ease;
+    }
+}
+
+.sj {
+    background-image: url(../img/sedesanjusto.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+
+    &:hover {
+        filter: grayscale(70%);
+        font-weight: bold;
+        transition: all .3s ease;
+    }
+}
+
+.rosedal {
+    background-image: url(../img/sederosedal.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+
+    &:hover {
+        filter: grayscale(70%);
+        font-weight: bold;
+        transition: all .3s ease;
+    }
+}
+
+.pilar {
+    background-image: url(../img/sedepilar.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+
+    &:hover {
+        filter: grayscale(70%);
+        font-weight: bold;
+        transition: all .3s ease;
+    }
+}
+
+#app {
+    background: linear-gradient(97deg, rgba(223, 0, 199, 1) 0%, rgba(104, 0, 163, 1) 85%);
+    @include flex (flex, row, wrap, space-around, center);
+    height: 600px;
+}
+
+.app {
+    width: 40%;
+    padding: 10px;
+    @include flex (flex, row, wrap, center, center);
+
+    &__text {
+        text-align: center;
+        color: white;
+
+        h3 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2rem;
+        }
+
+        h5 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1rem;
+        }
+    }
+
+    &__buttons {
+        width: 100%;
+        padding: 5px;
+        @include flex (flex, row, wrap, space-around, center);
+
+        a {
+            width: 40%;
+        }
+
+        button {
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+    }
+}
+
+.phone {
+    width: 20%;
+    padding: 20px;
+
+    img {
+        height: 400px;
+        width: 200px;
+        border-radius: 20px;
+    }
+}
+
+#seguinos {
+    background: $bg_nosotros;
+    @include flex (flex, column, wrap, center, center);
+    height: 600px;
+}
+
+.seguinos {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0 20px 0;
+
+    h3 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.8rem;
+        color: white;
+    }
+
+    h4 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.5rem;
+        color: $cl_botones;
+    }
+}
+
+.redes {
+    width: 80%;
+    margin: 0 auto;
+    @include flex (flex, row, wrap, space-around, center);
+    padding: 20px 0 20px 0;
+}
+
+.instagram-media {
+    width: 20%;
+    height: 200px;
+    border-radius: 20px;
+}
+
+#planes {
+    background-image: url(../img/meghan-holmes-buWcS7G1_28-unsplash.jpg);
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.planes {
+    @include flex (flex, row, wrap, space-around, center);
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+
+    &__texto {
+        width: 30%;
+        height: 600px;
+        padding-top: 250px;
+        color: white;
+        text-align: center;
+        background: rgba(128, 128, 128, 0.569);
+
+        h3 {
+            font-size: 2rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.card {
+    width: 250px;
+    height: 400px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+.card2 {
+    @include flex(flex, row, wrap, center, center);
+    width: 250px;
+    height: 400px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    transition: all .2s;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+
+    h4 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        width: 100%;
+    }
+}
+
+.card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.precio {
+    padding-right: 5px;
+    width: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.peso {
+    font-size: 1.5rem;
+    color: rgba(0, 255, 119, 0.996);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.inscribirme {
+    height: 50px;
+    width: 150px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.card:hover .inscribirme {
+    background: #3700ff;
+    color: white;
+    transition: all .3s;
+}
+
+#preguntas {
+    height: 600px;
+    width: 100%;
+    background: black;
+    @include flex (flex, row, wrap, space-between, center);
+    padding: 50px 100px;
+}
+
+.preguntas {
+    width: 30%;
+    color: white;
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        color: $cl_botones;
+    }
+}
+
+.acordeon {
+    width: 60%;
+}
+
+.accordion-item {
+    background-color: black;
+    color: white;
+}
+
+.footer {
+    height: 600px;
+    width: 100%;
+    background: $bg_nosotros;
+    @include flex(flex, row, wrap, space-around, center);
+
+    &__logo {
+        @include flex(flex, column, wrap, space-around, center);
+        width: 25%;
+
+        &__title {
+            @include flex (flex, row, wrap, center, center);
+            text-align: center;
+            width: 100%;
+
+            img {
+                width: 150px;
+                height: 50px;
+            }
+        }
+
+        &__social {
+            width: 100%;
+            text-align: center;
+            padding-top: 20px;
+
+            i {
+                height: 40px;
+                width: 40px;
+                padding: 5px;
+                line-height: 30px;
+                border-radius: 50%;
+                font-size: 25px;
+                color: white;
+            }
+        }
+    }
+
+    &__socios {
+        width: 20%;
+        @include flex (flex, row, wrap, center, center);
+        text-align: left;
+
+        h4 {
+            font-size: 2rem;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 100%;
+        }
+
+        a {
+            color: white;
+            text-align: center;
+            width: 200px;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    &__legal {
+        width: 20%;
+        @include flex (flex, row, wrap, center, center);
+        text-align: left;
+        padding-top: 20px;
+
+        h4 {
+            font-size: 2rem;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 100%;
+        }
+
+        a {
+            color: white;
+            text-align: center;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    &__fiscal {
+        width: 25%;
+        text-align: center;
+
+        img {
+            height: 100px;
+            width: 80px;
+        }
+    }
+
+    &__copyright {
+        color: white;
+        width: 100%;
+        text-align: center;
+        background: rgb(207, 0, 35);
+        @include flex(flex, row, wrap, center, center);
+
+        p {
+            padding-right: 30px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+.fa-square-facebook:hover {
+    color: blue;
+    transition: all .3s;
+}
+
+.fa-instagram:hover {
+    color: rgb(255, 0, 149);
+    transition: all .3s;
+}
+
+.fa-youtube:hover {
+    color: red;
+    transition: all .3s;
+}
+
+.fa-tiktok:hover {
+    color: black;
+    transition: all .3s;
+}
+
+//clases
+.bannerath {
+    background: linear-gradient(97deg, rgba(101, 39, 94, 1) 0%, rgba(92, 92, 92, 1) 85%);
+    width: 100%;
+    height: 600px;
+    padding-top: 70px;
+
+    &__title {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 4rem;
+            color: white;
+        }
+
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2rem;
+            color: $cl_botones;
+            font-weight: bold;
+        }
+    }
+
+    &__cards {
+        width: 80%;
+        margin: 0 auto;
+        @include flex(flex, row, wrap, center, flex-start);
+        text-align: center;
+
+        &__1 {
+            width: 30%;
+            padding: 10px;
+
+            &__i {
+                font-size: 40px;
+                background: rgb(123, 20, 123);
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                line-height: 60px;
+                margin-bottom: 20px;
+            }
+
+            &__h3 {
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            &__p {
+                color: white;
+            }
+        }
+    }
+}
+
+.linear {
+    background: linear-gradient(97deg, rgba(217, 41, 198, 1) 0%, rgb(61, 99, 205) 100%);
+    height: 25px;
+    width: 100%;
+    content: "";
+}
+
+.nuestrasclases {
+    height: 900px;
+    width: 100%;
+    @include flex(flex, row, wrap, center, center);
+    padding-top: 80px;
+    padding-bottom: 200px;
+
+    &__title {
+        width: 100%;
+        text-align: center;
+
+        h4 {
+            font-weight: bold;
+        }
+    }
+
+    &__div1 {
+        width: 30%;
+        height: 400px;
+        @include flex(flex, row, wrap, flex-start, flex-start);
+
+        &__title {
+            width: 150px;
+            text-align: center;
+            color: white;
+            padding-top: 5px;
+            background: linear-gradient(97deg, rgba(217, 41, 198, 1) 0%, rgb(61, 99, 205) 100%);
+        }
+
+        &__each {
+            width: 100%;
+            height: 400px;
+            @include flex (flex, column, wrap, flex-start, flex-start);
+            padding-top: 30px;
+
+            p {
+                width: 40%;
+            }
+        }
+
+        &__button {
+            width: 150px;
+
+            &__ath {
+                button {
+                    border: none;
+                    border-radius: 20px;
+                    color: rgb(160, 77, 156);
+                    width: 150px;
+                    height: 40px;
+                    font-weight: bold;
+
+                    &:hover {
+                        background: rgb(160, 77, 156);
+                        color: white;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+    }
+
+    &__div2 {
+        width: 35%;
+        height: 500px;
+        padding-top: 50px;
+    }
+}
+
+.bannerbike {
+    background: linear-gradient(97deg, rgba(149, 130, 147, 1) 0%, rgba(78, 16, 49, 1) 73%);
+    width: 100%;
+    height: 600px;
+    padding-top: 70px;
+}
+
+.linearbiker {
+    background: linear-gradient(97deg, rgba(217, 41, 198, 1) 0%, rgb(252, 0, 139) 100%);
+    height: 25px;
+    width: 100%;
+    content: "";
+}
+
+.nuestrasclases__div1__titlebike {
+    width: 150px;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    background: linear-gradient(97deg, rgba(217, 41, 198, 1) 0%, rgb(255, 0, 191)) 100%;
+}
+
+.nuestrasclases__div1__eachbike {
+    width: 100%;
+    height: 400px;
+    @include flex (flex, column, wrap, flex-start, flex-start);
+    padding-top: 30px;
+
+    p {
+        width: 100%;
+    }
+}
+
+.bannercrossfiters {
+    background: linear-gradient(97deg, rgb(207, 69, 179)0%, rgb(78, 16, 41) 73%);
+    ;
+    width: 100%;
+    height: 600px;
+    padding-top: 70px;
+}
+
+.bannerfighters {
+    background: linear-gradient(97deg, rgb(207, 147, 69)0%, rgb(255, 55, 0) 73%);
+    width: 100%;
+    height: 600px;
+    padding-top: 70px;
+}
+
+.bannerbox__cards__1__i {
+    font-size: 40px;
+    background: rgb(255, 123, 0);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+.linearfighter{
+    background: linear-gradient(97deg, rgb(207, 69, 69)0%, rgb(255, 55, 0) 73%);
+    height: 25px;
+    width: 100%;
+    content: "";
+}
+
+.nuestrasclases__div1__titlefight{
+    width: 150px;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    background: linear-gradient(97deg, rgb(217, 205, 41) 0%, rgb(255, 85, 0)) 100%;
+}
+.banneryoggers{
+    background: linear-gradient(97deg, rgb(17, 61, 12) 0%, rgb(72, 235, 39) 100%);
+}
+.linearyogger{
+    background: linear-gradient(97deg, rgb(74, 207, 69)0%, rgb(0, 255, 51) 73%);
+    height: 25px;
+    width: 100%;
+    content: "";
+}
+.nuestrasclases__div1__titleyogg{
+    width: 150px;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    background: linear-gradient(97deg, rgb(17, 61, 12) 0%, rgb(72, 235, 39) 100%);
+}
+//sedes
+
+.bannersedes{
+    width: 100%;
+    height: 670px;
+    background-image: url(../img/sederamos.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    &__title{
+        width: 100%;
+        text-align: center;
+        height: 100px;
+        padding-top: 230px;
+        h2{
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        h3{
+            color: $cl_botones;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+}
+.sede{
+    height: 600px;
+    width: 100%;
+    @include flex(flex, row, wrap, space-between, center);
+    &__img{
+        width: 50%;
+        height: 100%;
+    }
+    &__description{
+        width: 50%;
+        height: 100%;
+        @include flex(flex, row, wrap, center, center);
+        padding-right: 50px;
+        &__title{
+            width: 100%;
+            text-align: left;
+            padding-left: 100px;
+            h2{
+                color: $cl_botones;
+                font-weight: bold;
+                font-size: 3rem;
+            }
+            h3{
+                color: black;
+                font-weight: bold;
+                font-size: 3rem;
+            }
+            &__span{
+                width: 50px;
+                height: 8px;
+                background-color: $cl_botones;
+            }
+        }
+        &__adress{
+            width: 100%;
+            text-align: left;
+            padding-left: 100px;
+            h4{
+                font-weight: bold;
+                color: rgb(79, 79, 79);
+            }
+            h5{
+                font-weight: bold;
+                color: $cl_botones;
+            }
+        }
+        &__features{
+            width: 100%;
+            text-align: left;
+            padding-left: 100px;
+        }
+    }
+}
+.bg-dark{
+    background-color: rgb(25, 25, 25);
+}
+.cl-white{
+    color: white !important;
+}
+.corporativo{
+    width: 100%;
+    height: 670px;
+    background-image: url(../img/corporativo.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.corp{
+    width: 100%;
+    height: 800px;
+    padding-top: 100px;
+    text-align: center;
+    &__container{
+        width: 70%;
+        margin: 0 auto;
+        &__description{
+            width: 50%;
+            margin: 0 auto;
+        }
+        &__4sedes{
+            padding: 30px 0 30px 0;
+        }
+        &__sedes{
+            @include flex (flex, row, wrap, space-around, center);
+            width: 80%;
+            margin: 0 auto;
+        }
+        &__beneficios{
+            @include flex (flex, row, wrap, space-between, center);
+            width: 80%;
+            margin: 0 auto;
+            padding: 30px 0 30px 80px;
+        }
+        &__comunidad{
+            width: 80%;
+            @include flex (flex, row, wrap, space-between, center);
+            margin: 0 auto;
+            h4{
+                width: 100%;
+                padding-bottom: 30px;
+            }
+        }
+        &__button{
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+    }
+}
+
