@@ -1077,3 +1077,7 @@ img {
     .corp__container__button {
       margin: 0 auto;
       padding-top: 50px; }
+    #img_prom{
+      margin-top: 20px;
+      border-radius: 20px;
+    }
