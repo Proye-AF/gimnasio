@@ -375,7 +375,7 @@ img {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  color: white;
+  color: #ffffff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2rem; }
   .ramos:hover {
@@ -393,8 +393,8 @@ img {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  color: black;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #c90040;
+  font-family: Verdana, Geneva, Tahoma, sans-serif,;
   font-size: 2rem; }
   .sj:hover {
     filter: grayscale(70%);
@@ -411,8 +411,8 @@ img {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ffffff;
+  font-family:'Arial Narrow Bold', sans-serif;
   font-size: 2rem; }
   .rosedal:hover {
     filter: grayscale(70%);
@@ -429,7 +429,7 @@ img {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  color: black;
+  color: #c90040;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2rem; }
   .pilar:hover {
